@@ -7,6 +7,14 @@ docker-compose up
 http://localhost:8403/api/posts/ (CRUD) <br/>
 http://localhost:8403/api/comments/ (CRUD)
 
+### Routes
+
+GET|POST http://localhost:8403/api/posts/ <br/>
+GET|PATCH|DELETE http://localhost:8403/api/posts/{id} <br/>
+
+GET|POST http://localhost:8403/api/comments/ <br/>
+GET|PATCH|DELETE http://localhost:8403/api/comments/{id} <br/>
+
 ### Examples
 
 #### Add post
