@@ -1,13 +1,16 @@
-##Usage
+## Usage
+
 docker-compose up
 
-###API Endpoints
-http://localhost:8403/api/posts/ (CRUD)
+### API Endpoints
+
+http://localhost:8403/api/posts/ (CRUD) <br/>
 http://localhost:8403/api/comments/ (CRUD)
 
-###Examples
+### Examples
 
-####Add post
+#### Add post
+
 <pre>
 POST http://localhost:8403/api/posts/ 
 {
@@ -16,7 +19,8 @@ POST http://localhost:8403/api/posts/
 }
 </pre>
 
-####Add comment
+#### Add comment
+
 <pre>
 POST http://localhost:8403/api/comments/ 
 {
