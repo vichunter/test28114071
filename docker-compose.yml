@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: vic-test-app
+    restart: always
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_DATABASE: app
+      DB_USERNAME: user
+      DB_PASSWORD: password
+    ports:
+      - 8403:80
+  db:
+    image: postgres
+    container_name: vic-test-db
+    restart: always
+    healthcheck:
+      test: pg_isready -U user -d app
+      interval: 10s
+      timeout: 3s
+      retries: 3
+    environment:
+      POSTGRES_DB: app
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
